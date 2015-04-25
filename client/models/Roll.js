@@ -12,14 +12,18 @@
     function RollModel($log) {
 
         // Constructor
-        var Roll = function () {
-
+        var Roll = function (pinScore) {
+            this.pinScore = pinScore;
         };
 
         // Methods
 
 
         // Getters
+
+        Roll.prototype.getScore = function() {
+            return this.pinScore;
+        };
 
         return Roll;
     }

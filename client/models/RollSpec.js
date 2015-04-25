@@ -11,8 +11,13 @@ describe('Roll Model', function() {
         roll = new Roll();
     }));
 
-    it('first test', function(){
+    it('should be defined', function() {
+        expect(roll).toBeDefined();
+    });
 
+    it('should store the knocked down 5 pin', function(){
+        roll = new Roll(5);
+        expect(roll.getScore()).toEqual(5);
     });
 
 });
