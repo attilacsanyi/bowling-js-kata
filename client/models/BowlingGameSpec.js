@@ -55,3 +55,11 @@ describe('Bowling Game', function(){
   }
 
 });
+
+describe('Test singleton', function(){
+  it('should retrieve the same instance', function(){
+    var s1 = mySingleton.getInstance();
+    var s2 = mySingleton.getInstance();
+    expect(s1.getRandom()).toEqual(s2.getRandom());
+  });
+});

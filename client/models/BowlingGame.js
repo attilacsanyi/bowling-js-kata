@@ -48,3 +48,27 @@ var bowling = function(){
     getScore : getScore
   };
 };
+
+var mySingleton = (function(){
+  var instance;
+
+  function init() {
+
+    var privateRandom = Math.random();
+
+    return {
+      getRandom : function() {
+        return privateRandom;
+      }
+    };
+  }
+
+  return {
+    getInstance : function (){
+      if(!instance) {
+        instance = init();
+      }
+      return instance;
+    }
+  }
+})();
